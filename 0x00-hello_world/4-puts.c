@@ -2,12 +2,9 @@
 
 /**
  *  * main - Entry point
- *   * 
- *    * Description: 'main function will print a text which is \"Programming is like building a multilingual puzzle'
- *     * 
- *      * 
- *       * Return: Always 42 (Success)
- *        */
+ *    * Description: 'main function will print a text'
+ *       * Return: Always 1 (Success)
+ */
 
 int main(void)
 {
@@ -16,5 +13,5 @@ int main(void)
 
 	puts(helloworld);
 
-	return (42);
+	return (1);
 }
