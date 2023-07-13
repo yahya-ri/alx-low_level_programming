@@ -3,7 +3,7 @@
 /**
  *  * main - Entry point
  *    * Description: 'main function will print a text'
- *       * Return: Always 1 (Success)
+ *       * Return: Always 0 (Success)
  */
 
 int main(void)
@@ -13,5 +13,5 @@ int main(void)
 
 	puts(helloworld);
 
-	return (1);
+	return (0);
 }
