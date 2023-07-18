@@ -1,9 +1,12 @@
 #include "main.h"
-/*
- * _islower - check if 1 is a
+
+/**
+ * _islower - Shows 1 if the input is a
+ * @c: The character in ASCII code
  *
- * Return: 1 for lowercase characters. 0 for the rest.
+ * Return: 1 for lowercase character. 0 for the rest.
  */
+
 int _islower(int c)
 {
 	if (c >= 97 && c <= 122)
