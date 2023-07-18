@@ -2,7 +2,6 @@
 
 /**
  * print_sign - Printing the sign of a number
- * 
  * @n: The character in ASCII code
  *
  * Return: 1 if n > 0 and 0 if n = 0 and -1 if n < 0
