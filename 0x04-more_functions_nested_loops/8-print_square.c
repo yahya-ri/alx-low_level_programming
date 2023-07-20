@@ -1,8 +1,8 @@
 #include "main.h"
 
 /**
- * print_diagonal - print \.
- * @n: times diagonal line is printed.
+ * print_square - print a square
+ * @size: is an int the size of the square.
  * Return: no return.
  */
 
@@ -20,11 +20,11 @@ void print_square(int size)
 		for (k = 0; k < size; k++)
 		{
 			for (i = 0; i < size; i++)
-			{	
+			{
 				_putchar(35);
 			}
 			_putchar('\n');
-		}	
+		}
 	}
 
 }
