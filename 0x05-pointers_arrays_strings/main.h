@@ -6,5 +6,6 @@ void swap_int(int *a, int *b);
 int _strlen(char *str);
 void _puts(char *str);
 void print_rev(char *s);
+int _putchar(char);
 
 #endif

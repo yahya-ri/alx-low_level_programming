@@ -10,13 +10,13 @@ void print_rev(char *str)
 {
 	int siz = 0;
 
-	while (count >= 0)
+	while (siz >= 0)
 	{
 		if (str[siz] == '\0')
 			break;
 		siz++;
 	}
 	for (siz--; siz >= 0; siz--)
-		_putchar(s[siz]);
+		_putchar(s[count]);
 	_putchar('\n');
 }
