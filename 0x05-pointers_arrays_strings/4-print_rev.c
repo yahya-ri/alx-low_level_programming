@@ -17,6 +17,6 @@ void print_rev(char *str)
 		siz++;
 	}
 	for (siz--; siz >= 0; siz--)
-		_putchar(s[count]);
+		_putchar(str[siz]);
 	_putchar('\n');
 }
