@@ -1,9 +1,10 @@
 #include "main.h"
 
 /**
- *
- *
- *
+ * swap_int - swap *a and *b.
+ * @a: is an integer.
+ * @b: is an integer.
+ * Return: no return.
  */
 
 void swap_int(int *a, int *b)
