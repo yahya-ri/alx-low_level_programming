@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stddef.h>
 
 /**
  * _strlen - get length of string.
@@ -8,7 +9,7 @@
 
 int _strlen(char *str)
 {
-	size_t length = 0;
+	size_t siz = 0;
 
 	while (str[siz] != '\0')
 	{
