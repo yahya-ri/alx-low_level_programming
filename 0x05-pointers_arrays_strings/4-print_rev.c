@@ -8,22 +8,15 @@
 
 void print_rev(char *str)
 {
-	char reversed_string[100];
-	int i, j;
-	size_t siz = 0;
+	int siz = 0;
 
-	while (str[siz] != '\0')
+	while (count >= 0)
 	{
+		if (str[siz] == '\0')
+			break;
 		siz++;
 	}
-	j = siz - 1;
-
-	for (i = 0; i < (int)siz; i++)
-	{
-		reversed_string[i] = str[j];
-		j--;
-	}
-
-	reversed_string[i] = '\0';
-	printf("%s\n", reversed_string);
+	for (siz--; siz >= 0; siz--)
+		_putchar(s[siz]);
+	_putchar('\n');
 }
