@@ -12,6 +12,7 @@ unsigned int _strspn(char *s, char *accept)
 
 	unsigned int count = 0;
 	int found = 1;
+	char *a = accept;
 
 	while (*s && found)
 	{
@@ -29,6 +30,7 @@ unsigned int _strspn(char *s, char *accept)
 		{
 			count++;
 			s++;
+			a = accept;
 		}
 	}
 
