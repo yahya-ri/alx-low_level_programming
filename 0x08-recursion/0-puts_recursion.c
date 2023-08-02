@@ -1,9 +1,9 @@
 #include "main.h"
 
 /**
- *
- *
- *
+ * _puts_recursion - print a string using recursion.
+ * @s: string.
+ * Return: returns nothing.
  */
 
 
