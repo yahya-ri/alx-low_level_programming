@@ -1,44 +1,33 @@
 #include "main.h"
 
 /**
- * _strlen_recursion - returns the length of a string.
- * @s: string
- * Return: the length of a string.
+ * is_divisible - Helper function to check if n is divisible by i.
+ * @n: The integer to be checked for divisibility.
+ * @i: The current divisor being checked, starting from 2.
+ * Return: 1 if n is not divisible by any integer, 0 otherwise.
  */
-int _strlen_recursion(char *s)
-{
-	if (*s == '\0')
-		return (0);
-	else
-		return (1 + _strlen_recursion(s + 1));
-}
 
-/**
- * comparator - compares each character of the string.
- * @s: string
- * @n1: smallest iterator.
- * @n2: biggest iterator.
- * Return: .
- */
-int comparator(char *s, int n1, int n2)
+
+int is_divisible(int n, int i)
 {
-	if (*(s + n1) == *(s + n2))
+	if (i * i > n)
 	{
-		if (n1 == n2 || n1 == n2 + 1)
-			return (1);
-		return (0 + comparator(s, n1 + 1, n2 - 1));
+		return (1);
 	}
-	return (0);
+	if (n % i == 0 || n < 2)
+	{
+		return (0);
+	}
+	return (is_divisible(n, i + 1));
 }
 
 /**
- * is_palindrome - detects if a string is a palindrome.
- * @s: string.
- * Return: 1 if s is a palindrome, 0 if not.
+ * is_prime_number - Check if an integer is a prime number.
+ * @n: The integer to be checked for primality.
+ * Return: 1 if n is a prime number, 0 otherwise.
  */
-int is_palindrome(char *s)
+
+int is_prime_number(int n)
 {
-	if (*s == '\0')
-		return (1);
-	return (comparator(s, 0, _strlen_recursion(s) - 1));
+	return (n < 2 ? 0 : is_divisible(n, 2));
 }
