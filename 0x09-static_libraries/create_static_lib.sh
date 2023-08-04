@@ -13,4 +13,4 @@ while [ "$counter" -lt "$c_n" ]; do
 done
 
 o_f=$(ls *.o 2>/dev/null)
-ar rcs libmy.a $o_f
+ar rcs liball.a $o_f
