@@ -3,7 +3,8 @@
 #include <stdlib.h>
 
 /**
- * string_nconcat - Concatenates two strings with at most n bytes of the second string.
+ * string_nconcat - Concatenates two strings
+ * with at most n bytes of the second string.
  * @s1: a string.
  * @s2: a string.
  * @n: bytes.
