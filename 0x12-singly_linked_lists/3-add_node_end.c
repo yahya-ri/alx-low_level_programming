@@ -1,7 +1,7 @@
 #include "lists.h"
 
 /**
- * add_node - will add a new node at the end of a list.
+ * add_node_end - will add a new node at the end of a list.
  * @head: the first node.
  * @str: string to store in the list.
  * Return: the address of the head.
