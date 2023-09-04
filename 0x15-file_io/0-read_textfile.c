@@ -13,36 +13,38 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	char *buffer;
 	ssize_t idk, idk2, total;
 
-	total = 0;
-
-	if (!filename || letters == 0)
+	if (filename == NULL)
+		return (0);
+	buffer = malloc(sizeof(char) * letters);
+	if (buffer == NULL)
 		return (0);
 
 	cont = open(filename, O_RDONLY);
 	if (cont == -1)
-		return (0);
-
-	buffer = (char *)malloc(letters);
-	if (!buffer)
 	{
-		close(cont);
+		free(buffer);
+		return (0);
+	}
+	total = read(cont, buffer, letters);
+	if (total == -1)
+	{
+		free(buffer);
+		return (0);
+	}
+	if (total > 0)
+		idk = write(STDOUT_FILENO, buffer, total);
+	if (idk < total)
+	{
+		free(buffer);
 		return (0);
 	}
 
-	while ((idk = read(cont, buffer, letters)) > 0)
+	idk2 = close(cont);
+	if (idk2 == -1)
 	{
-		idk2 = write(STDOUT_FILENO, buffer, idk);
-		if (idk2 == -1)
-		{
-			close(cont);
-			free(buffer);
-			return (0);
-		}
-		total += idk2;
+		free(buffer);
+		return (0);
 	}
-
-	close(cont);
 	free(buffer);
-
 	return (total);
 }
