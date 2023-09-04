@@ -25,7 +25,9 @@ int create_file(const char *filename, char *text_content)
 		return (1);
 	}
 	bytes = 0;
-	for (bytes = 0; text_content[bytes]; bytes++);
+	for (bytes = 0; text_content[bytes]; bytes++)
+	{
+	}
 
 	if (bytes > 0)
 	error_check = write(file, text_content, bytes);
